@@ -1,5 +1,5 @@
 
-const API_BASE = "http://127.0.0.1:8000";
+const API_BASE = "https://truthlens-ai-api-j4r5.onrender.com";
 const HISTORY_KEY = "truthlens_prediction_history_v1";
 const $ = (id) => document.getElementById(id);
 let latestResult = null;
