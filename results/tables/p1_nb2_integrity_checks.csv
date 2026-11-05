@@ -1,0 +1,8 @@
+Check,Passed
+Partitions cover every row exactly once,True
+Row indices disjoint between partitions,True
+No identical title+body group in train and validation,True
+No identical title+body group in train and test,True
+No identical title+body group in validation and test,True
+"Label values are exactly {0, 1}",True
+Both labels in every partition,True

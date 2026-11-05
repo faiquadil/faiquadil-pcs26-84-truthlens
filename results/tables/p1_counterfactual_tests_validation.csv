@@ -1,0 +1,6 @@
+model,perturbation,baseline % predicted Real,after % predicted Real,baseline % predicted Fake,after % predicted Fake,baseline accuracy %,after accuracy %
+V0 Linear SVM (raw input),inject 'WASHINGTON (Reuters) -' into FAKE articles,0.398406374501992,4.951622083096187,,,,
+V0 Linear SVM (raw input),remove leading dateline from REAL articles,,,0.19175455417066153,0.9907318632150848,,
+Frozen model (marker-stripped input),inject 'WASHINGTON (Reuters) -' into FAKE articles,0.8537279453614115,0.8537279453614115,,,,
+Frozen model (marker-stripped input),remove leading dateline from REAL articles,,,0.5433045701502077,0.5433045701502077,,
+"Frozen model (V3, uses title)",swap each headline with a random headline of the OTHER class,,,,,99.29248833358423,97.96778563901852

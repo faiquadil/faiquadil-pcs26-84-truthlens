@@ -1,0 +1,4 @@
+stage,Fake,Real,Total
+Original combined dataset,23481,21417,44898
+After removing empty news text,22851,21416,44267
+After removing exact duplicate rows,22848,21210,44058

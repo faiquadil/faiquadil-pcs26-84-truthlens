@@ -1,0 +1,2 @@
+model,checkpoint,best_epoch,best_validation_loss,test_examples,accuracy,precision,recall,f1_score,roc_auc,inference_seconds,inference_ms_per_article
+BiLSTM (corrected checkpoint),c:\Users\mi\Desktop\Fake-news detection\models\bilstm_best_corrected.pt,3,0.0005205387330057645,6610,0.9989409984871407,1.0,0.9978063303039799,0.9989019607843137,0.9998219069811821,4.724908351898193,0.7148121561116783

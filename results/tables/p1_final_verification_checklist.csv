@@ -1,0 +1,21 @@
+item,status,detail
+01_dataset_audit_eda.ipynb is valid notebook JSON,PASS,
+02_ml_baselines.ipynb is valid notebook JSON,PASS,
+03_lstm_bilstm.ipynb is valid notebook JSON,PASS,
+04_transformer_experiment.ipynb is valid notebook JSON,PASS,
+05_evaluation_explainability.ipynb is valid notebook JSON,PASS,
+Dataset integrity (each row in exactly one partition),PASS,
+"Label mapping Fake=0 / Real=1 consistent (utils, models, data)",PASS,
+Split alignment: validation predictions match manifest rows,PASS,
+Duplicate-group leakage: no identical title+body group across partitions,PASS,
+Training-only preprocessing (TF-IDF document count = eligible train rows),PASS,
+Model compatibility: all stored artefacts reload and reproduce predictions,PASS,
+"Prediction function returns label + score, warns on short input and rejects empty input",PASS,
+Figure 24_consolidated_validation_comparison.png saved,PASS,
+Figure 25_validation_confusion_matrices.png saved,PASS,
+Figure 26_validation_roc_pr_curves.png saved,PASS,
+subject/date excluded from every model input,PASS,ArticleTextBuilder reads only title and text
+Limitations are documented in every notebook (markdown mentions 'limitation'),PASS,
+Stored configurations record that the test set was NOT used for selection,PASS,earlier legacy SVM test exposure is documented in the notebooks
+DistilBERT pilot checkpoint and configuration available,PASS,Pilot experiment completed; full-data experiment and final test evaluation pending.
+DistilBERT full-data experiment status documented,PASS,Full-data training and final test evaluation remain pending due to resource limitations.

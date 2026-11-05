@@ -1,0 +1,5 @@
+partition,class,articles,sim>=0.99,sim>=0.95,sim>=0.90,sim>=0.80,median_max_sim
+validation,Fake,3523,19,40,57,92,0.231
+validation,Real,3129,69,80,89,101,0.389
+test,Fake,3419,27,40,68,98,0.235
+test,Real,3191,64,71,80,107,0.387

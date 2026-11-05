@@ -1,0 +1,3 @@
+class,articles,median_tokens,share_truncated_(>MAX_LEN)_pct,share_shorter_than_MAX_LEN_pct
+Fake,15845,442.0,86.8,13.2
+Real,14890,427.0,73.6,26.3

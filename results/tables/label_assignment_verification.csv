@@ -1,0 +1,10 @@
+Check,Value
+Rows in Fake.csv,23481
+Rows in True.csv,21417
+Rows in combined_fake_news.csv,44898
+Combined rows traced only to Fake.csv,23481
+Combined rows traced only to True.csv,21417
+Combined rows found in BOTH raw files (ambiguous),0
+Combined rows found in NEITHER raw file,0
+Traceable rows whose label disagrees with the source file,0
+Subjects shared by Fake.csv and True.csv,0

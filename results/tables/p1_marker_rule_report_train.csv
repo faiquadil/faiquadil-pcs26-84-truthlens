@@ -1,0 +1,14 @@
+rule,description,prevalence_fake,prevalence_real,skew_ratio,selected
+dateline_reuters,Leading '[CITY] (Reuters) -' dateline (seen in the sample rows of Notebook 01),0.0001257387149503332,0.984150436534587,875.1146455668012,True
+reuters_token,Any remaining 'Reuters' token,0.01332830378473532,0.9983881799865681,69.74923166071255,True
+reporting_by_credit,Wire-style '(Reporting by ...; Editing by ...)' credit,0.0,0.015513767629281397,16.513767629281396,True
+century_wire,'21st Century Wire (says)' (seen in a Fake sample row of Notebook 01),0.05406764742864328,0.0,55.067647428643276,True
+featured_image,'Featured image (via ...)' caption phrase,0.3391801835785238,0.0,340.1801835785238,True
+image_credit,'Photo/Image via|credit' caption phrase,0.2852382748648309,0.0,286.2382748648309,True
+getty_images,'Getty Images' credit,0.17050169747265184,0.0,171.50169747265184,True
+pic_twitter,Embedded tweet picture link,0.15032063372312335,0.0,151.32063372312334,True
+url,URLs,0.14529108512511002,0.0020147750167897917,48.52471057057002,True
+twitter_handle,@handles,0.2668804224820822,0.01229012760241773,20.156346913730882,True
+watch_label,'WATCH:' embed label,0.05941154281403244,0.0,60.411542814032444,True
+read_more_label,'READ MORE:' label,0.0320005029548598,0.00040295500335795837,23.522139253128888,True
+generic_dateline,Generic 'CITY - ' dateline without a named agency,0.002200427511630831,0.001208865010073875,1.4489013575002456,False

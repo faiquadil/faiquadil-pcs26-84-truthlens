@@ -1,0 +1,5 @@
+,text_characters,text_characters,text_characters,text_characters,text_characters,text_characters,text_words,text_words,text_words,text_words,text_words,text_words,title_words,title_words,title_words,title_words,title_words,title_words
+,count,mean,median,std,min,max,count,mean,median,std,min,max,count,mean,median,std,min,max
+class,,,,,,,,,,,,,,,,,,
+Fake,22848,2617.77,2200.0,2531.65,5,51794,22848,434.89,369.0,407.82,1,8135,22848,14.73,14.0,4.33,1,42
+Real,21210,2378.15,2216.0,1684.43,152,29781,21210,384.78,359.0,273.9,22,5172,21210,9.95,10.0,1.7,4,20

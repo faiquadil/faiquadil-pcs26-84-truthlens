@@ -1,0 +1,26 @@
+{
+  "results/tables/data_split_manifest.csv": {
+    "sha256": "87a1759607d3a787a9d973635b27e6ab1faeebcba72f6f92bb71f6f694b79e4b",
+    "recorded_utc": "2026-10-14T15:02:54+00:00"
+  },
+  "dataset/combined_fake_news_clean.csv": {
+    "sha256": "ed9b5a0593fb63417f7929fe28603cf668cd04964dc6c4deca5af67576d1acdc",
+    "recorded_utc": "2026-10-14T15:02:54+00:00"
+  },
+  "models/phase1/ml_selected_pipeline.joblib": {
+    "sha256": "9d8114ca1bc43af6be809a9498cb50991fabca2bc4b42042d081aa3b703794ce",
+    "recorded_utc": "2026-10-14T15:25:56+00:00"
+  },
+  "models/phase1/ml_logistic_regression_pipeline.joblib": {
+    "sha256": "796619ddb39544a622f3d44b211b64fe04c1a31015d09e26881459613b108f65",
+    "recorded_utc": "2026-10-15T14:36:11+00:00"
+  },
+  "models/phase1/bilstm_phase1_best.pt": {
+    "sha256": "9ebbcc7b26bbddb1e73ff2ae293d0138941c2243ddc0ff268d61048a49b5e114",
+    "recorded_utc": "2026-10-15T17:22:34+00:00"
+  },
+  "models/phase1/ml_info_matched_svm.joblib": {
+    "sha256": "0882b2599780d2ecb999f8b9b427e15ccd53725f8d835fbdebe7aa081c8e695d",
+    "recorded_utc": "2026-10-15T17:22:34+00:00"
+  }
+}

@@ -1,0 +1,5 @@
+,title_word_count,title_word_count,title_word_count,title_word_count,title_word_count,title_word_count,title_word_count,title_word_count,title_char_count,title_char_count,title_char_count,title_char_count,title_char_count,title_char_count,title_char_count,title_char_count
+,count,mean,std,min,25%,50%,75%,max,count,mean,std,min,25%,50%,75%,max
+label_name,,,,,,,,,,,,,,,,
+Fake,22848.0,14.73,4.33,1.0,12.0,14.0,17.0,42.0,22848.0,94.22,27.24,8.0,77.0,90.0,105.0,286.0
+Real,21210.0,9.95,1.7,4.0,9.0,10.0,11.0,20.0,21210.0,64.66,9.16,26.0,59.0,64.0,70.0,133.0

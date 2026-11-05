@@ -1,0 +1,6 @@
+Model,Accuracy,Precision,Recall,F1-Score,Best Epoch,Best Validation Loss,Metric Source
+Linear SVM,0.9969933854479855,0.9955371373924132,0.9980824544582934,0.99680817108203,,,Validation set
+Logistic Regression,0.9942874323511726,0.9923542529467984,0.9955257270693512,0.9939374601148692,,,Validation set
+Multinomial Naive Bayes,0.9613650030066144,0.954718176060798,0.9635666347075744,0.9591219977731829,,,Validation set
+LSTM,0.9984966927239928,,,,4.0,0.0074121085674178,Saved validation training history
+BiLSTM (corrected),0.9998496692723992,,,,3.0,0.0005205387330057,Saved corrected validation training history

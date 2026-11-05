@@ -1,0 +1,4 @@
+exclusion,Fake removed,Real removed,Fake removed (% of Fake),Real removed (% of Real)
+Empty / whitespace-only text (title-only records),630,1,2.68,0.0
+Exact duplicate rows (all 5 columns identical),3,206,0.01,0.96
+Total removed,633,207,2.7,0.97

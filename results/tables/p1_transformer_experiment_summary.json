@@ -1,0 +1,19 @@
+{
+    "project": "PCS26/84 - Deep Learning-Based Fake News Detection",
+    "model": "DistilBERT",
+    "pretrained_model": "distilbert-base-uncased",
+    "execution_device": "cuda",
+    "training_rows": 500,
+    "validation_rows": 300,
+    "epochs": 2,
+    "max_length": 256,
+    "batch_size": 8,
+    "accuracy": 0.95,
+    "macro_f1": 0.9499059344769623,
+    "roc_auc": 0.991435835675097,
+    "average_precision": 0.9904173053921606,
+    "model_reload_verified": true,
+    "final_test_evaluated": false,
+    "experiment_type": "Pilot subset experiment",
+    "limitation": "Metrics are based on 500 training and 300 validation rows; not directly comparable with full-validation experiments."
+}

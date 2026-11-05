@@ -1,0 +1,12 @@
+check,result,detail
+Frozen ML bundle hash equals stored configuration,OK,
+Reloaded ML pipeline reproduces stored validation predictions (first 200 rows),OK,
+Selected DL checkpoint hash equals stored configuration,OK,bilstm_phase1_best.pt
+Information-matched SVM hash equals stored configuration,OK,
+Reloaded LSTM reproduces its scores (first 100 rows),OK,
+"LSTM checkpoint stores vocabulary, architecture and label mapping",OK,
+Reloaded BiLSTM reproduces its scores (first 100 rows),OK,
+"BiLSTM checkpoint stores vocabulary, architecture and label mapping",OK,
+Label mapping stored with models equals project mapping,OK,
+Hash registry: manifest unchanged,OK,
+TF-IDF was fitted on training rows only (implied document count equals eligible TRAIN rows),OK,implied 30735 vs 30735

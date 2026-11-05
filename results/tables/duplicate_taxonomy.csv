@@ -1,0 +1,5 @@
+level,groups,records_affected,detail
+L1 exact duplicate rows removed,,209,removed in the cleaning cell
+L2 repeated title+body pairs,4943.0,10345,"5402 extra copies; 4939 pairs differ in subject, 6 differ in date; 0 with conflicting labels"
+"L3 same body, different title",17.0,50,0 groups with conflicting labels
+"L4 same title, different body",341.0,725,0 groups with conflicting labels

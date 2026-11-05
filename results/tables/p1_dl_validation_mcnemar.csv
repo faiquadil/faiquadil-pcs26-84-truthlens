@@ -1,0 +1,5 @@
+model_A,model_B,a_right_b_wrong,a_wrong_b_right,p_value
+BiLSTM,LSTM,92,59,0.008986616457699331
+BiLSTM,"ML (frozen, full text)",39,64,0.017609056867909468
+LSTM,"ML (frozen, full text)",36,94,3.733796732609798e-07
+BiLSTM,"ML (info-matched, first 200 tokens)",70,56,0.24670624718941742

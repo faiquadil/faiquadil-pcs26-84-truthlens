@@ -1,0 +1,8 @@
+Diagnostic,Result
+Cleaned records,44058
+Unique normalized title-text pairs,38656
+Repeated normalized pairs,4943
+Pairs with conflicting labels,0
+Subject used as a model input,No
+Date used as a model input,No
+Group-aware split verified (computed from the manifest),Yes

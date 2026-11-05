@@ -1,0 +1,52 @@
+﻿# Python environments
+.venv/
+venv/
+env/
+.dist/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Jupyter temporary files
+.ipynb_checkpoints/
+
+# Temporary and backup folders
+frontend_backup/
+Old_Submissions_Backup/
+results - Copy/
+_temp_clean_submission/
+*.backup*
+*.before_*
+README.md.backup*
+
+# Frontend backup
+frontend/index.before_analytics_fix_*.html
+
+# Local secrets
+.env
+.env.*
+
+# OS/editor files
+.DS_Store
+Thumbs.db
+.vscode/
+
+# Large research datasets (kept in local submission ZIP)
+dataset/*.csv
+
+# Large DistilBERT checkpoint (kept in local submission ZIP)
+models/transformer_distilbert/model.safetensors
+
+# Backup and smoke-test artifacts
+*backup*
+*smoke_test*
+
+# Older duplicate model checkpoints
+/models/bilstm_best.pt
+/models/bilstm_best_corrected.pt
+/models/lstm_best.pt
+
+# CSV with multiline formatting warnings
+/results/tables/p1_error_analysis_validation.csv

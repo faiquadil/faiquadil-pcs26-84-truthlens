@@ -1,0 +1,5 @@
+Metric,Value
+Total cleaned records,44058
+Successfully parsed dates,44048
+Unparseable dates,10
+Unique publication dates,1010

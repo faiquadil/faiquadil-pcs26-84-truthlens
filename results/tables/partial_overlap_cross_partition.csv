@@ -1,0 +1,3 @@
+check,groups_crossing_partitions
+Identical bodies that appear in more than one partition,10
+Identical titles that appear in more than one partition,176

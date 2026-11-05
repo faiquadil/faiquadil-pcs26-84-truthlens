@@ -1,0 +1,89 @@
+{
+  "signature": {
+    "variant": "V3",
+    "model": "Linear SVM",
+    "active_rules": [
+      "dateline_reuters",
+      "reuters_token",
+      "reporting_by_credit",
+      "century_wire",
+      "featured_image",
+      "image_credit",
+      "getty_images",
+      "pic_twitter",
+      "url",
+      "twitter_handle",
+      "watch_label",
+      "read_more_label"
+    ]
+  },
+  "input_description": "Title + body, publisher markers removed",
+  "label_mapping": {
+    "Fake": 0,
+    "Real": 1
+  },
+  "marker_rule_patterns": {
+    "dateline_reuters": "^\\s*(?:[A-Z][A-Za-z0-9.,'/&\\- ]{0,60}?)?\\(\\s*Reuters\\s*\\)\\s*[-\\u2013\\u2014:]*\\s*",
+    "reuters_token": "\\bReuters\\b",
+    "reporting_by_credit": "\\(\\s*(?:Additional\\s+)?(?:Reporting|Writing|Editing)\\s+by[^)]{0,250}\\)",
+    "century_wire": "\\b21st\\s+Century\\s+Wire\\b(?:\\s+says)?",
+    "featured_image": "\\bfeatured\\s+image(?:\\s+(?:via|credit|courtesy\\s+of))?",
+    "image_credit": "\\b(?:photo|image)\\s+(?:via|credit|courtesy\\s+of)\\b",
+    "getty_images": "\\bgetty\\s+images?\\b",
+    "pic_twitter": "\\bpic\\.twitter\\.com/\\S+",
+    "url": "https?://\\S+|\\bwww\\.\\S+",
+    "twitter_handle": "(?<![\\w.])@\\w{1,15}\\b",
+    "watch_label": "\\bWATCH\\b\\s*[:\\-\\u2013\\u2014]",
+    "read_more_label": "\\bREAD\\s+MORE\\b\\s*[:\\-\\u2013\\u2014]?"
+  },
+  "rule_selection": {
+    "min_prevalence": 0.01,
+    "min_ratio": 5.0,
+    "fitted_on": "training partition"
+  },
+  "tfidf_params": {
+    "lowercase": "True",
+    "strip_accents": "unicode",
+    "ngram_range": "(1, 2)",
+    "max_features": "100000",
+    "min_df": "2",
+    "max_df": "0.95",
+    "sublinear_tf": "True",
+    "dtype": "<class 'numpy.float32'>"
+  },
+  "classifier_params": {
+    "C": "1.0",
+    "class_weight": "None",
+    "dual": "auto",
+    "fit_intercept": "True",
+    "intercept_scaling": "1",
+    "loss": "squared_hinge",
+    "max_iter": "3000",
+    "multi_class": "ovr",
+    "penalty": "l2",
+    "random_state": "42",
+    "tol": "0.0001",
+    "verbose": "0"
+  },
+  "hyperparameter_search_performed": false,
+  "training_rows": 30735,
+  "validation_rows": 6643,
+  "validation_metrics": {
+    "n": 6643,
+    "accuracy": 0.9929248833358423,
+    "precision_fake": 0.995144244501571,
+    "recall_fake": 0.9914627205463858,
+    "f1_fake": 0.9933000712758375,
+    "precision_real": 0.9904519414385742,
+    "recall_real": 0.994566954298498,
+    "f1_real": 0.9925051825865093,
+    "macro_f1": 0.9929026269311734,
+    "roc_auc": 0.9997310670571606
+  },
+  "selection_rule": "highest validation macro-F1 among V3/V4 x {LR, SVM, NB}; ties within 0.001 by ROC-AUC",
+  "created_utc": "2026-10-14T15:25:52+00:00",
+  "sklearn_version": "1.9.1",
+  "bundle_sha256": "9d8114ca1bc43af6be809a9498cb50991fabca2bc4b42042d081aa3b703794ce",
+  "test_set_used_for_selection": false,
+  "disclaimer": "This model predicts whether an article resembles the 'Fake' or 'Real' class of its training dataset. It does not verify factual claims."
+}

@@ -1,0 +1,5 @@
+feature,roc_auc_for_Real,separation_|2*AUC-1|
+title_words,0.1258,0.7485
+title_chars,0.1151,0.7698
+body_words,0.4673,0.0654
+body_chars,0.4813,0.0374

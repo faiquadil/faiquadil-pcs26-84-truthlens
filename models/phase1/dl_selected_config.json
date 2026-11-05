@@ -1,0 +1,83 @@
+{
+  "signature": {
+    "selected": "BiLSTM",
+    "input_variant": "V3",
+    "active_rules": [
+      "dateline_reuters",
+      "reuters_token",
+      "reporting_by_credit",
+      "century_wire",
+      "featured_image",
+      "image_credit",
+      "getty_images",
+      "pic_twitter",
+      "url",
+      "twitter_handle",
+      "watch_label",
+      "read_more_label"
+    ]
+  },
+  "checkpoint": "bilstm_phase1_best.pt",
+  "checkpoint_sha256": "9ebbcc7b26bbddb1e73ff2ae293d0138941c2243ddc0ff268d61048a49b5e114",
+  "info_matched_svm": "ml_info_matched_svm.joblib",
+  "info_matched_sha256": "0882b2599780d2ecb999f8b9b427e15ccd53725f8d835fbdebe7aa081c8e695d",
+  "validation_comparison": [
+    {
+      "model": "LSTM",
+      "n": 6643,
+      "accuracy": 0.984194,
+      "precision_fake": 0.987418,
+      "recall_fake": 0.982641,
+      "f1_fake": 0.985024,
+      "precision_real": 0.98061,
+      "recall_real": 0.985938,
+      "f1_real": 0.983267,
+      "macro_f1": 0.984145,
+      "roc_auc": 0.996476
+    },
+    {
+      "model": "BiLSTM",
+      "n": 6643,
+      "accuracy": 0.989162,
+      "precision_fake": 0.993972,
+      "recall_fake": 0.985487,
+      "f1_fake": 0.989711,
+      "precision_real": 0.983856,
+      "recall_real": 0.993289,
+      "f1_real": 0.98855,
+      "macro_f1": 0.98913,
+      "roc_auc": 0.999332
+    },
+    {
+      "model": "ML (frozen, full text)",
+      "n": 6643,
+      "accuracy": 0.992925,
+      "precision_fake": 0.995144,
+      "recall_fake": 0.991463,
+      "f1_fake": 0.9933,
+      "precision_real": 0.990452,
+      "recall_real": 0.994567,
+      "f1_real": 0.992505,
+      "macro_f1": 0.992903,
+      "roc_auc": 0.999731
+    },
+    {
+      "model": "ML (info-matched, first 200 tokens)",
+      "n": 6643,
+      "accuracy": 0.987054,
+      "precision_fake": 0.992529,
+      "recall_fake": 0.982925,
+      "f1_fake": 0.987704,
+      "precision_real": 0.981031,
+      "recall_real": 0.991691,
+      "f1_real": 0.986332,
+      "macro_f1": 0.987018,
+      "roc_auc": 0.999191
+    }
+  ],
+  "selection_rule": "highest validation macro-F1; within 0.001 prefer LSTM",
+  "ml_frozen_bundle_sha256": "9d8114ca1bc43af6be809a9498cb50991fabca2bc4b42042d081aa3b703794ce",
+  "test_set_used_for_selection": false,
+  "created_utc": "2026-10-15T17:22:34+00:00",
+  "disclaimer": "This model predicts whether an article resembles the 'Fake' or 'Real' class of its training dataset. It does not verify factual claims."
+}

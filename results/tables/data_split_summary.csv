@@ -1,0 +1,4 @@
+Partition,Records,Percentage,Fake,Real
+Train,30796,69.9,15906,14890
+Validation,6652,15.1,3523,3129
+Test,6610,15.0,3419,3191

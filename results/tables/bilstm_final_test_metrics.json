@@ -1,0 +1,14 @@
+{
+  "model": "BiLSTM (corrected checkpoint)",
+  "checkpoint": "c:\\Users\\mi\\Desktop\\Fake-news detection\\models\\bilstm_best_corrected.pt",
+  "best_epoch": 3,
+  "best_validation_loss": 0.0005205387330057645,
+  "test_examples": 6610,
+  "accuracy": 0.9989409984871407,
+  "precision": 1.0,
+  "recall": 0.9978063303039799,
+  "f1_score": 0.9989019607843137,
+  "roc_auc": 0.9998219069811821,
+  "inference_seconds": 4.724908351898193,
+  "inference_ms_per_article": 0.7148121561116783
+}

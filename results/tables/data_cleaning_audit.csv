@@ -1,0 +1,4 @@
+stage,records
+Original combined dataset,44898
+After removing empty news text,44267
+After removing exact duplicate rows,44058

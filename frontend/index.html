@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0b1220" />
+  <title>TruthLens AI — Know What's Real</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <a class="brand" href="#" data-page="dashboard">
+        <span class="brand-mark"><i class="icon-shield"></i></span>
+        <span><strong>TruthLens<span>AI</span></strong><small>NEWS INTELLIGENCE</small></span>
+      </a>
+      <div class="nav-label">WORKSPACE</div>
+      <nav class="nav-menu" aria-label="Main navigation">
+        <button class="nav-link active" data-page="dashboard"><span class="nav-icon">◫</span>Dashboard</button>
+        <button class="nav-link" data-page="analysis"><span class="nav-icon">⌕</span>News Analysis</button>
+        <button class="nav-link" data-page="history"><span class="nav-icon">↺</span>Prediction History</button>
+        <button class="nav-link" data-page="analytics"><span class="nav-icon">▥</span>Analytics</button>
+        <button class="nav-link" data-page="about"><span class="nav-icon">ⓘ</span>About Project</button>
+      </nav>
+      <div class="sidebar-bottom">
+        <div class="sidebar-note"><span class="pulse"></span><div><b>AI workspace</b><small>Ready for analysis</small></div></div>
+        <div class="sidebar-foot">PCS26/84 · Final Year Project</div>
+      </div>
+    </aside>
+
+    <main class="main-area">
+      <header class="topbar">
+        <button class="mobile-menu" id="menuToggle" aria-label="Toggle navigation">☰</button>
+        <div class="breadcrumb"><span>Workspace</span><b>/</b><strong id="pageName">Dashboard</strong></div>
+        <div class="topbar-right"><span class="status-dot"></span><span class="status-text">System interface</span><div class="avatar">TL</div></div>
+      </header>
+
+      <section class="page active" id="page-dashboard">
+        <div class="hero">
+          <div class="hero-copy">
+            <div class="eyebrow"><span class="eyebrow-line"></span> AI-POWERED NEWS ANALYSIS</div>
+            <h1>Know what's <span>real.</span><br>Look beyond the headline.</h1>
+            <p>Analyze news articles with machine learning and deep learning models. Get a prediction with an interpretable result.</p>
+            <button class="btn btn-primary" data-go="analysis">Start analysing <span>↗</span></button>
+          </div>
+          <div class="hero-art" aria-hidden="true">
+            <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+            <div class="core-shield">✓</div><div class="orbit-dot dot-one"></div><div class="orbit-dot dot-two"></div>
+            <div class="art-caption"><span class="mini-pulse"></span> INTELLIGENCE, IN FOCUS</div>
+          </div>
+        </div>
+
+        <div class="section-heading"><div><div class="eyebrow">YOUR WORKSPACE</div><h2>Overview</h2></div><span class="muted tiny">Based on this browser's saved history</span></div>
+        <div class="stats-grid">
+          <article class="stat-card"><div class="stat-top"><span>Total predictions</span><span class="stat-icon blue">⌁</span></div><strong id="totalCount">0</strong><small>All recorded analyses</small></article>
+          <article class="stat-card"><div class="stat-top"><span>Predicted fake</span><span class="stat-icon orange">!</span></div><strong id="fakeCount">0</strong><small>Model-labelled fake</small></article>
+          <article class="stat-card"><div class="stat-top"><span>Predicted real</span><span class="stat-icon green">✓</span></div><strong id="realCount">0</strong><small>Model-labelled real</small></article>
+          <article class="stat-card"><div class="stat-top"><span>Latest activity</span><span class="stat-icon violet">◷</span></div><strong class="latest-stat" id="latestDate">—</strong><small>Most recent prediction</small></article>
+        </div>
+        <div class="lower-grid">
+          <article class="panel recent-panel"><div class="panel-heading"><div><h3>Recent activity</h3><p>Your latest article analyses</p></div><button class="text-button" data-go="history">View history ↗</button></div><div id="recentList" class="recent-list"><div class="empty-state compact"><span>◷</span><b>No activity yet</b><p>Your predictions will appear here.</p></div></div></article>
+          <article class="panel tip-panel"><div class="tip-symbol">✳</div><div class="eyebrow">A QUICK REMINDER</div><h3>Read critically.<br>Verify independently.</h3><p>A model prediction reflects patterns learned from its training data. It does not independently establish whether an article's claims are true.</p><button class="text-button" data-go="about">Learn about this project ↗</button></article>
+        </div>
+      </section>
+
+      <section class="page" id="page-analysis">
+        <div class="page-intro"><div class="eyebrow">ANALYSIS STUDIO</div><h1>News <span>Analysis</span></h1><p>Provide a headline and article text to get a model prediction.</p></div>
+        <div class="analysis-layout">
+          <article class="panel input-panel">
+            <div class="panel-heading"><div><h3>Article details</h3><p>Enter the content you want to analyse</p></div><span class="step-chip">01 / INPUT</span></div>
+            <label for="newsTitle">News headline <span>OPTIONAL</span></label>
+            <input id="newsTitle" type="text" maxlength="500" placeholder="Enter the news headline..." />
+            <div class="label-row"><label for="newsText">Article content</label><span id="wordCount">0 words</span></div>
+            <textarea id="newsText" rows="12" placeholder="Paste the full news article here..."></textarea>
+            <div class="input-hint"><span>ⓘ</span> Longer, complete articles may provide more useful input than short excerpts.</div>
+            <div class="form-actions"><button class="btn btn-secondary" id="clearBtn">Clear</button><button class="btn btn-primary" id="analyzeBtn">Analyse article <span>↗</span></button></div>
+            <p class="form-error" id="formError" role="alert"></p>
+          </article>
+          <article class="panel result-panel">
+            <div class="panel-heading"><div><h3>Analysis result</h3><p>Your prediction will appear here</p></div><span class="step-chip">02 / RESULT</span></div>
+            <div id="resultPlaceholder" class="result-placeholder"><div class="scan-graphic"><span>⌕</span><i></i><i></i><i></i></div><h3>Ready when you are</h3><p>Submit an article to view its prediction and model output.</p></div>
+            <div id="resultContent" class="result-content hidden">
+              <div class="result-label" id="resultLabel">—</div>
+              <h2 id="resultHeadline">Prediction complete</h2>
+              <p id="resultDescription" class="result-description"></p>
+              <div class="result-meta"><span>MODEL OUTPUT</span><strong id="decisionValue">—</strong></div>
+              <div class="result-note" id="resultNote"></div>
+              <div class="result-actions"><button class="btn btn-secondary" id="copyBtn">Copy result</button><button class="btn btn-primary" id="pdfBtn">Print / Save PDF ↗</button></div>
+            </div>
+          </article>
+        </div>
+        <div class="disclaimer"><b>Important:</b> TruthLens AI is an academic prediction system. Its output is not a fact-check, source authentication, or a guarantee of truth.</div>
+      </section>
+
+      <section class="page" id="page-history">
+        <div class="page-intro"><div class="eyebrow">YOUR ACTIVITY</div><h1>Prediction <span>History</span></h1><p>Review predictions saved in this browser.</p></div>
+        <article class="panel">
+          <div class="history-toolbar"><div class="search-box"><span>⌕</span><input id="historySearch" type="search" placeholder="Search headlines..." /></div><select id="historyFilter" aria-label="Filter predictions"><option value="all">All predictions</option><option value="Fake">Fake</option><option value="Real">Real</option></select><button class="btn btn-danger-outline" id="clearHistoryBtn">Clear history</button></div>
+          <div class="table-wrap"><table><thead><tr><th>ARTICLE</th><th>PREDICTION</th><th>DATE & TIME</th></tr></thead><tbody id="historyRows"><tr><td colspan="3" class="table-empty">No predictions saved yet.</td></tr></tbody></table></div>
+          <p class="storage-note">History is stored locally in this browser and is not synced across devices.</p>
+        </article>
+      </section>
+
+      <section class="page" id="page-analytics">
+        <div class="page-intro"><div class="eyebrow">MODEL PERFORMANCE</div><h1>Project <span>Analytics</span></h1><p>Experiment metrics from your research notebooks.</p></div>
+
+<div class="notice-box">
+  <b>Selected Model: Linear SVM (V3)</b>
+  The following metrics are from the held-out test evaluation. This is the model currently connected to the TruthLens AI prediction API.
+</div>
+
+<div class="stats-grid analytics-stats">
+  <article class="stat-card">
+    <div class="stat-top"><span>Accuracy</span><span class="stat-icon blue">◎</span></div>
+    <strong>99.20%</strong><small>Held-out test set</small>
+  </article>
+  <article class="stat-card">
+    <div class="stat-top"><span>Macro Precision</span><span class="stat-icon green">⌁</span></div>
+    <strong>99.19%</strong><small>Held-out test set</small>
+  </article>
+  <article class="stat-card">
+    <div class="stat-top"><span>Macro Recall</span><span class="stat-icon violet">↗</span></div>
+    <strong>99.21%</strong><small>Held-out test set</small>
+  </article>
+  <article class="stat-card">
+    <div class="stat-top"><span>F1-score</span><span class="stat-icon orange">✳</span></div>
+    <strong>99.20%</strong><small>Held-out test set</small>
+  </article>
+</div>
+
+<article class="panel chart-panel">
+  <div class="panel-heading">
+    <div>
+      <h3>BiLSTM Model Performance</h3>
+      <p>Separate held-out test evaluation — corrected checkpoint.</p>
+    </div>
+  </div>
+  <div class="stats-grid analytics-stats">
+    <article class="stat-card"><span>Accuracy</span><strong>98.94%</strong></article>
+    <article class="stat-card"><span>Macro Precision</span><strong>98.93%</strong></article>
+    <article class="stat-card"><span>Macro Recall</span><strong>98.95%</strong></article>
+    <article class="stat-card"><span>F1-score</span><strong>98.94%</strong></article>
+  </div>
+  <p class="storage-note">The BiLSTM results are reported separately. The live prediction API currently uses Linear SVM (V3).</p>
+</article>
+</section>
+
+      <section class="page" id="page-about">
+        <div class="page-intro"><div class="eyebrow">PROJECT INFORMATION</div><h1>About <span>TruthLens AI</span></h1><p>An academic project exploring machine learning and deep learning for fake news detection.</p></div>
+        <article class="panel about-hero"><div class="about-badge">PCS26/84</div><h2>Deep Learning-Based<br><span>Fake News Detection</span></h2><p>Explore how text classification models can identify patterns associated with fake and real news labels in a research dataset.</p></article>
+        <div class="about-grid"><article class="panel"><div class="eyebrow">01 / OBJECTIVE</div><h3>Project objective</h3><p>Build and evaluate text-based classification models and provide an accessible interface for analysing news articles.</p></article><article class="panel"><div class="eyebrow">02 / APPROACH</div><h3>Methodology</h3><p>Dataset inspection, preprocessing, leakage-aware splitting, model training, evaluation and explainability.</p></article><article class="panel"><div class="eyebrow">03 / MODELS</div><h3>Models explored</h3><p>Logistic Regression, Linear SVM, LSTM, BiLSTM and a DistilBERT pilot experiment.</p></article><article class="panel"><div class="eyebrow">04 / TECHNOLOGY</div><h3>Technology stack</h3><p>Python, Pandas, Scikit-learn, PyTorch, FastAPI, HTML, CSS and JavaScript.</p></article></div>
+        <div class="disclaimer"><b>Research limitation:</b> A classifier learns associations from its training dataset. A Real prediction does not prove a story is true, and a Fake prediction does not independently prove it false. Always verify claims using reliable independent sources.</div>
+      </section>
+
+      <footer class="footer"><span>© 2026 TruthLens AI · PCS26/84</span><span>Built for academic research</span></footer>
+    </main>
+  </div>
+  <div class="toast" id="toast" role="status"></div>
+  <script src="script.js"></script>
+</body>
+</html>

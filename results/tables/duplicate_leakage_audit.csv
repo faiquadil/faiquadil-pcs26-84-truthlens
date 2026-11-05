@@ -1,0 +1,7 @@
+Metric,Value
+Clean records,44058
+Unique normalized title-text pairs,38656
+Title-text pairs appearing more than once,4943
+Records belonging to repeated title-text pairs,10345
+Repeated records beyond one copy per pair,5402
+Title-text pairs with conflicting labels,0
